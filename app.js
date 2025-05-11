@@ -1,22 +1,26 @@
+
+
 function convertCurrency(pesos) {
-   return resultado = (pesos / 1300)
+    return resultado = ((pesos / 1300).toFixed(2) + " dólares")
 }
 
-switch (numero = parseInt(prompt("1) Divisa (ARS --> USD)\n2) Salir"))) {
-    case 1:
-        parseInt(prompt(convertCurrency("Ingrese el monto que desea convertir: ")))
-        alert(resultado)
-        break;
-    case 2:
-        alert("Adios")
-        break;
-    default:
-        alert("Opciones inválidas, nuevamente") 
+let numero;
+
+while (true) {
+    numero = parseFloat(prompt("1) Divisa (ARS     -->USD)\n2) Salir"))
+    switch (numero) {
+        case 1:
+            convertCurrency(parseFloat(prompt("Ingrese el monto que desea convertir: ")))
+            alert(resultado)
+            alert(pesos)
+            break;
+        case 2:
+            alert("hola")
+            break;
+        default:
+            alert("Opciones inválidas, nuevamente") 
     }
-
-history = {
-    tipo: "divisa",
-    entrada: "1300 ARS",
-    salida: "1 USD",
-    fecha:
 }
+
+
+
