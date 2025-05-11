@@ -1,5 +1,5 @@
 
-let history = []
+let history = [] /* Array vacío, o lista como se llama en Python */
 
 function convertCurrency(pesos) {
     resultado = ((pesos / 1300).toFixed(2))
@@ -7,14 +7,14 @@ function convertCurrency(pesos) {
     tipo: "divisa",
     entrada: [pesos],
     salida: [resultado],
-    fecha: new Date().toLocaleString()
+    fecha: new Date().toLocaleString() /* Mostrará la fecha del momento */
 }
-    history.push(objeto)
+    history.push(objeto) /* No olvidar que con ".push" se agrega elementos al array */
     return resultado
 }
 
-let numero;
-let salida = true
+let numero; /* Creando una variable pero sin valor */
+let salida = true /* Variable booleana que de no existir no se podría cambiar la condición del bucle */
 
 while (salida) {
     numero = parseFloat(prompt("1) Divisa (ARS     -->USD)\n2) Salir"))
@@ -22,12 +22,12 @@ while (salida) {
         case 1:
             convertCurrency(parseFloat(prompt("Ingrese el monto que desea convertir: ")))
             alert(resultado)
-            break;
+            break; /* Este bucle continúa indifinidamente, mientras los registros se van guardando */
         case 2:
-            console.log(history)
-            salida = false
+            console.log(history) /* Para que se muestre por consola (F12) */
+            salida = false /* Evitará que el bucle continue sin parar */
             break;
         default:
-            alert("Opciones inválidas, nuevamente") 
-    }
+            alert("Opciones inválidas, nuevamente") /* Si el usuario ingresa algo que no corresponda se muestra esto pero el bucle continuará*/
+}
 }
